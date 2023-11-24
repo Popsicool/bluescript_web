@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for message in messages %}
+        <p>{{ messagge }}</p>
+    {% endfor %}
+    <h1>Create a product</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="name">Name</label><br>
+        <input type="text" name="name"><br>
+        <label for="price">Price</label><br>
+        <input type="number" name="price"><br>
+        <label for="quantity">Quantity</label><br>
+        <input type="number" name="quantity"><br>
+        <label for="size">Size</label><br>
+        <select name="size" id="">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+        </select><br>
+        <label for="description">Descripton</label><br>
+        <textarea name="description" id="" cols="30" rows="10"></textarea><br>
+        <label for="colour">Colour</label><br>
+        <input type="text" name="color"><br>
+        <input type="file"><br>
+
+        <button>Create</button>
+
+    </form>
+</body>
+</html>
